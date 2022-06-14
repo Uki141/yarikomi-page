@@ -1,55 +1,59 @@
 <template>
   <v-container id="Home" fluid class="pa-0">
     <HomeTopSectionVue />
-    <div id="Top">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
-    </div>
-    <div class="full-fill" data-aos="fade-right" data-aos-duration="1500">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem sed eligendi dignissimos doloribus, commodi quo
-      esse earum optio vel. Ea placeat veniam molestiae exercitationem culpa iure magni, earum obcaecati molestias?
-      Ipsam fugit mollitia at incidunt est deleniti soluta eum nam perspiciatis. Quos enim illo vero sint obcaecati
-      fugit tempore est quae consequatur culpa, nesciunt repellendus quibusdam? Iure quia explicabo blanditiis.
-      Magni dolore molestiae optio numquam quasi sunt laudantium atque repellat alias maxime doloremque obcaecati,
-      pariatur illum vero! Facere quam ipsum corporis aspernatur sit facilis, unde, nostrum, dignissimos omnis ratione
-      quod.
-      Maiores cumque, corporis eaque excepturi quod voluptates ad quaerat accusantium facere id natus quos commodi magni
-      consequuntur. Sint fugiat, quas animi repudiandae non dolorem quidem, dolores iusto nulla reiciendis pariatur.
-      Commodi ipsam quae necessitatibus! Sapiente molestias possimus quam magni fugit corrupti neque eveniet
-      reprehenderit. Atque accusamus itaque, modi voluptatibus quas ex illum corrupti nemo recusandae repellendus, totam
-      qui amet nihil?
-      Commodi ipsa facilis quae iure. Rem, sit quod! Impedit ducimus quis vel! Hic veritatis omnis dolore totam amet
-      reiciendis, consequatur est ea libero maiores. Autem iusto exercitationem animi quam asperiores.
-      Eaque iste voluptate temporibus saepe. Repellat, magnam ratione at earum tenetur quo molestias minus nemo alias
-      eius assumenda error facere! Iusto mollitia sunt voluptates voluptatibus dolorum? Reiciendis neque quidem
-      voluptatum.
-      Architecto eligendi, omnis quaerat debitis magni adipisci dolores, quos, doloribus tempora sunt magnam. Sunt
-      fugiat ratione, nulla sequi excepturi dolor quo voluptatem ipsa nostrum at eius molestiae ducimus impedit non.
-      Id doloribus temporibus nemo quo omnis, sapiente quas ea reiciendis necessitatibus explicabo pariatur ipsum
-      tempora doloremque. A nobis molestias nisi error quidem fugiat, atque voluptas repellendus eius laboriosam aperiam
-      tempore.
-      Atque ad doloribus labore iste aut similique, modi aliquid culpa non rerum id vitae, laudantium voluptatibus!
-      Quaerat doloremque impedit eum hic obcaecati ab? Ipsam id excepturi, eaque deserunt incidunt corrupti?
-    </div>
+    <HomeArticle :halfHeight="true">
+      <template #title><span class="title-impact">音ゲー</span>って何？</template>
+      <template #description>
+        <p>音ゲーとは、</p>
+        <p>流れてくる音楽のリズムに合わせて操作を行う、</p>
+        <p>体感型ゲームの総称。</p>
+      </template>
+    </HomeArticle>
+    <v-divider></v-divider>
+    <HomeArticle :halfHeight="true" :rightJustifiy="true">
+      <template #title><span class="title-impact-red">何が</span>楽しいの？</template>
+      <template #description>
+        <p>知らない曲との出会い</p>
+        <p>昨日の自分を明確に超えられる達成感</p>
+        <p>音楽と同じで、人それぞれの楽しみ方がある。</p>
+      </template>
+    </HomeArticle>
+    <v-divider></v-divider>
+    <HomeArticle :halfHeight="false" :rightJustifiy="false" :dark="true">
+      <template #title><span class="title-impact">活動内容</span></template>
+      <template #description>
+        <ul>
+          <li>定例会</li>
+          <ul>
+            <li>ゲームセンター行って、遊んで、ご飯食べて</li>
+            みたいな感じです
+          </ul>
+          <li>チャット交流</li>
+          <ul>
+            <li>Twitterに書くほどでもない自慢　とか</li>
+            <li>誰かと共有したいこと　とか</li>
+            しようもない事でも話せる場をつくります
+          </ul>
+          <li>月例大会開催</li>
+          <ul>
+            <li>景品アリで大会を開きたいなぁと思っています</li>
+            人が集まればですが！
+          </ul>
+        </ul>
+      </template>
+    </HomeArticle>
+
   </v-container>
 </template>
 
 <script>
-import HomeNav from "@/components/templates/HomeNav.vue"
 import HomeTopSectionVue from "@/components/templates/HomeTopSection.vue"
+import HomeArticle from "@/components/templates/HomeArticle.vue"
 
 export default {
   components: {
-    HomeNav,
-    HomeTopSectionVue
+    HomeTopSectionVue,
+    HomeArticle
   }
 }
 </script>

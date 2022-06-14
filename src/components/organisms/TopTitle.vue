@@ -1,13 +1,13 @@
 <template>
-  <div class="top-title d-flex flex-column">
+  <div class="top-title d-flex flex-column" data-aos="fade-right" data-aos-duration="1500">
     <div class="top-title-subtitle">
       <slot name="subtitle"></slot>
     </div>
-    <div class="top-title-title mt-n10">
+    <div class="top-title-title mt-n16 d-flex">
       <slot></slot>
-    </div>
-    <div class="top-title-annotation">
-      <slot name="annotation"></slot>
+      <div class="top-title-annotation align-self-end">
+        <slot name="annotation"></slot>
+      </div>
     </div>
   </div>
 </template>
@@ -19,13 +19,28 @@ export default {
 </script>
 
 <style scoped>
+.top-title {
+  font-size: 10vh;
+  min-width: 1280px;
+  color: #fff;
+}
+
 .top-title-title {
-  font-size: 20vh;
+  font-size: 2em;
+  color: #22A2F2;
+  -webkit-text-stroke: 2px #1A2E40;
   font-family: 'gagagaga', 'RocknRoll One', sans-serif;
 }
 
-.top-title-subtitle,
-top-title-annotation {
+.top-title-subtitle {
+  font-size: 0.5em;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.top-title-annotation {
+  color: #fff;
+  -webkit-text-stroke: 0px #1A2E40;
+  font-size: 0.15em;
   font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 </style>
