@@ -1,10 +1,33 @@
-import Vue from 'vue'
-import App from './App.vue'
-import router from './router'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import vuetify from "./plugins/vuetify";
 
-Vue.config.productionTip = false
+import "@/assets/load-font.css";
+
+import VueSmoothScroll from "vue2-smooth-scroll";
+import animate from "animate.css";
+import AOS from "aos";
+import aos_css from "aos/dist/aos.css";
+
+Vue.config.productionTip = false;
+Vue.use(VueSmoothScroll, {
+  duration: 1200,
+  offset: 0,
+  updateHistory: true,
+  easingFunction: (t) =>
+    t < 0.5 ? 4 * t * t * t : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1,
+});
 
 new Vue({
   router,
-  render: h => h(App)
-}).$mount('#app')
+  vuetify,
+  animate,
+  aos_css,
+  render: (h) => h(App),
+  mounted() {
+    AOS.init({
+      once: true,
+    });
+  },
+}).$mount("#app");
