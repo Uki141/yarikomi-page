@@ -10,7 +10,7 @@
       <v-col class="col-1"></v-col>
     </v-row>
     <v-row class="d-flex justify-center">
-      <img src="/img/googlechat.png" class="google-chat-img" />
+      <img src="@/assets/img/googlechat.png" class="google-chat-img" />
     </v-row>
   </v-container>
 </template>

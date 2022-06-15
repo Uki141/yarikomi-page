@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="home-top-section lazyload" data-bg="/img/top.min.gif">
+  <v-container fluid class="home-top-section lazyload">
     <v-row>
       <v-col class="col-12 full-height d-flex flex-column justify-center">
         <TopTitle>
@@ -33,7 +33,14 @@ export default {
 .home-top-section {
   height: 100vh;
   min-height: 100vh;
+}
+
+.home-top-section.lazyload {
   background-image: url("@/assets/img/top.png");
+}
+
+.home-top-section.lazyloaded {
+  background-image: url("@/assets/img/top.min.gif");
 }
 
 .full-height {
