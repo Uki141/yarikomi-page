@@ -1,26 +1,33 @@
 <template>
   <v-container id="Home" fluid class="pa-0">
-    <HomeTopSectionVue />
-    <HomeArticle :halfHeight="true">
-      <template #title><span class="title-impact">音ゲー</span>って何？</template>
+    <HomeTopSection />
+
+    <HomeArticle :half-height="true">
+      <template #title>
+        <span class="title-accent">音ゲー</span>って何？
+      </template>
       <template #description>
         <p>音ゲーとは、</p>
         <p>流れてくる音楽のリズムに合わせて操作を行う、</p>
         <p>体感型ゲームの総称。</p>
       </template>
     </HomeArticle>
-    <v-divider></v-divider>
-    <HomeArticle :halfHeight="true" :rightJustifiy="true">
-      <template #title><span class="title-impact-red">何が</span>楽しいの？</template>
+
+    <HomeArticle :half-height="true" :justify-right="true" :accent-red="true">
+      <template #title>
+        <span class="title-accent">何が</span>楽しいの？
+      </template>
       <template #description>
         <p>知らない曲との出会い</p>
         <p>昨日の自分を明確に超えられる達成感</p>
         <p>音楽と同じで、人それぞれの楽しみ方がある。</p>
       </template>
     </HomeArticle>
-    <v-divider></v-divider>
-    <HomeArticle :halfHeight="false" :rightJustifiy="false" :dark="true">
-      <template #title><span class="title-impact">活動内容</span></template>
+
+    <HomeArticle :half-height="false" :dark="true">
+      <template #title>
+        <span class="title-accent">活動内容</span>
+      </template>
       <template #description>
         <ul>
           <li>定例会</li>
@@ -43,17 +50,28 @@
       </template>
     </HomeArticle>
 
+    <HomeGames />
+
+    <HomeInfomation>
+      <template #heading>
+        部員募集中！
+      </template>
+    </HomeInfomation>
   </v-container>
 </template>
 
 <script>
-import HomeTopSectionVue from "@/components/templates/HomeTopSection.vue"
+import HomeTopSection from "@/components/templates/HomeTopSection.vue"
 import HomeArticle from "@/components/templates/HomeArticle.vue"
+import HomeGames from "@/components/templates/HomeGames.vue"
+import HomeInfomation from "@/components/templates/HomeInfomation.vue"
 
 export default {
   components: {
-    HomeTopSectionVue,
-    HomeArticle
+    HomeTopSection,
+    HomeArticle,
+    HomeGames,
+    HomeInfomation
   }
 }
 </script>

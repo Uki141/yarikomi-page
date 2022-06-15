@@ -1,7 +1,7 @@
 <template>
-  <v-container fluid class="home-top-section">
+  <v-container fluid class="home-top-section lazyload" data-bg="/img/top.min.gif">
     <v-row>
-      <v-col class="col-lg-8 col-12 full-height d-flex flex-column justify-center">
+      <v-col class="col-12 full-height d-flex flex-column justify-center">
         <TopTitle>
           <template #subtitle>音ゲーサークル</template>
           <template>やりこみ</template>
@@ -33,12 +33,30 @@ export default {
 .home-top-section {
   height: 100vh;
   min-height: 100vh;
-  background-image: url("@/assets/img/top.min.gif");
+  background-image: url("@/assets/img/top.png");
 }
 
 .full-height {
   height: 100vh;
   background-color: rgba(6, 8, 13, 90%);
-  clip-path: polygon(0% 100%, 0% 0%, 62.5% 0%, 100% 100%);
+  clip-path: polygon(0% 100%, 0% 0%, 50% 0%, 72% 100%);
+}
+
+@media (max-width:1750px) {
+  .full-height {
+    clip-path: polygon(0% 100%, 0% 0%, 62.5% 0%, 84.5% 100%);
+  }
+}
+
+@media (max-width:1440px) {
+  .full-height {
+    clip-path: polygon(0% 100%, 0% 0%, 60% 0%, 82% 100%);
+  }
+}
+
+@media (max-width:1200px) {
+  .full-height {
+    clip-path: polygon(0% 100%, 0% 0%, 100% 0%, 100% 100%);
+  }
 }
 </style>

@@ -9,6 +9,8 @@ import VueSmoothScroll from "vue2-smooth-scroll";
 import animate from "animate.css";
 import AOS from "aos";
 import aos_css from "aos/dist/aos.css";
+import lazysizes from "lazysizes";
+import unveilhooks from "lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js";
 
 Vue.config.productionTip = false;
 Vue.use(VueSmoothScroll, {
@@ -24,6 +26,8 @@ new Vue({
   vuetify,
   animate,
   aos_css,
+  lazysizes,
+  unveilhooks,
   render: (h) => h(App),
   mounted() {
     AOS.init({

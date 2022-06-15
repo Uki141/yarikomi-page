@@ -18,7 +18,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
 
 html {
   font-family: 'Zen Kaku Gothic New', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
