@@ -137,6 +137,7 @@ export default {
   overflow: hidden;
   width: 90vw;
   min-height: 100vh;
+  max-height: 100vh;
 }
 
 

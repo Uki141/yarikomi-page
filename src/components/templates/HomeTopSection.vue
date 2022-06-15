@@ -33,6 +33,7 @@ export default {
 .home-top-section {
   height: 100vh;
   min-height: 100vh;
+  background-color: #1A2E40;
 }
 
 .home-top-section.lazyload {
@@ -40,7 +41,7 @@ export default {
 }
 
 .home-top-section.lazyloaded {
-  background-image: url("@/assets/img/top.min.gif");
+  background-image: url("@/assets/img/top.min.gif"), url("@/assets/img/top.png");
 }
 
 .full-height {

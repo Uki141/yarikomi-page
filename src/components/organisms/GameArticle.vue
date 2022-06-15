@@ -53,6 +53,7 @@ export default {
   color: #FFF;
   font-size: 4vh;
   font-family: 'Zen Kaku Gothic New', Courier, monospace;
+  overflow: hidden;
 
   --color: "#FFF";
   --text-stroke-color: "#1A2E40";
@@ -73,6 +74,7 @@ export default {
 }
 
 .game-article-content {
+  max-height: 100%;
   flex-grow: 1;
   font-size: 0.75em;
 }
