@@ -1,7 +1,7 @@
 <template>
   <v-container fluid class="home-article"
     :class="{ 'half-height': halfHeight, 'text-aligin-right': justifyRight, 'home-article-dark': dark }"
-    data-aos="fade-down" data-aos-duration="1500">
+    data-aos="fade-down" data-aos-duration="1500" data-aos-anchor-placement="bottom-bottom">
 
     <v-row>
       <v-col class="col-lg-1 col-auto"></v-col>

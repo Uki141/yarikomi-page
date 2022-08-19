@@ -1,9 +1,11 @@
 <template>
-  <v-container fluid class="home-top-section lazyload">
-    <v-row>
-      <v-col class="col-12 full-height d-flex flex-column justify-center">
+  <v-container fluid class="home-top-section lazyload base">
+    <v-row class="full-height">
+      <v-col class="col-12 d-flex flex-column justify-center">
         <TopTitle>
-          <template #subtitle>音ゲーサークル</template>
+          <template #titleHeader>
+            <slot name="titleHeader"></slot>
+          </template>
           <template>やりこみ</template>
           <template #annotation>(仮称)</template>
         </TopTitle>
@@ -12,7 +14,6 @@
           <template>音を楽しむ、だから本気になる。</template>
         </TopSubTitle>
       </v-col>
-      <v-spacer />
     </v-row>
   </v-container>
 </template>
@@ -31,9 +32,8 @@ export default {
 
 <style scoped>
 .home-top-section {
-  height: 100vh;
-  min-height: 100vh;
-  background-color: #1A2E40;
+  min-height: var(--section-height);
+  max-height: var(--section-height);
 }
 
 .home-top-section.lazyload {
@@ -45,8 +45,8 @@ export default {
 }
 
 .full-height {
-  height: 100vh;
-  background-color: rgba(6, 8, 13, 90%);
+  height: var(--section-height);
+  background-color: rgba(var(--base-color-rgb), 0.9);
   clip-path: polygon(0% 100%, 0% 0%, 50% 0%, 72% 100%);
 }
 

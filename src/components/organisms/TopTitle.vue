@@ -1,9 +1,12 @@
 <template>
-  <div class="top-title d-flex flex-column" data-aos="fade-right" data-aos-duration="1500">
-    <div class="top-title-subtitle">
-      <slot name="subtitle"></slot>
+  <div class="top-title d-flex flex-column" data-aos="fade-right" data-aos-duration="1500"
+    data-aos-anchor-placement="bottom-bottom">
+    <div>
+      <span class="top-title-titleHeader ">
+        <slot name="titleHeader"></slot>
+      </span>
     </div>
-    <div class="top-title-title mt-n16 d-flex">
+    <div class="top-title-title d-flex primary--text">
       <slot></slot>
       <div class="top-title-annotation align-self-end">
         <slot name="annotation"></slot>
@@ -20,27 +23,26 @@ export default {
 
 <style scoped>
 .top-title {
-  font-size: 10vh;
-  min-width: 1280px;
-  color: #fff;
+  min-width: calc(100vw * 0.8);
+  color: var(--text-color);
+}
+
+.top-title-titleHeader {
+  font-size: 1rem;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 
 .top-title-title {
-  font-size: 2em;
-  color: #22A2F2;
+  font-size: min(5rem, 300px);
+  font-family: 'gagagaga', sans-serif;
   -webkit-text-stroke: 2px #1A2E40;
-  font-family: 'gagagaga', 'RocknRoll One', sans-serif;
-}
-
-.top-title-subtitle {
-  font-size: 0.5em;
-  font-family: 'Zen Kaku Gothic New', sans-serif;
+  margin-top: -1.5rem;
 }
 
 .top-title-annotation {
-  color: #fff;
-  -webkit-text-stroke: 0px #1A2E40;
-  font-size: 0.15em;
+  font-size: 0.75rem;
   font-family: 'Zen Kaku Gothic New', sans-serif;
+  -webkit-text-stroke: 0px;
+  color: var(--text-color);
 }
 </style>

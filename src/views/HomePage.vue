@@ -1,6 +1,11 @@
 <template>
-  <v-container id="Home" fluid class="pa-0">
-    <HomeTopSection />
+  <v-container id="Home" fluid class="home-page pa-0">
+    <HomeTopSection>
+      <template #titleHeader>音ゲーサークル</template>
+      <template #title>やりこみ</template>
+      <template #annotation>(仮称)</template>
+      <template #subTitle>音を楽しむ、だから本気になる。</template>
+    </HomeTopSection>
 
     <HomeArticle :half-height="true">
       <template #title>
@@ -72,9 +77,29 @@ export default {
     HomeArticle,
     HomeGames,
     HomeInfomation
+  },
+  data() {
+    return {
+      drawer: true,
+    }
   }
 }
 </script>
+
+<style>
+:root {
+  /* 画面サイズ関連 */
+  --section-height: 100vh;
+  --nav-height: 50px;
+  /* 色関係 */
+  --base-color: #06080D;
+  --base-color-rgb: 6, 8, 3;
+  --text-color: #FFFFFF;
+  --text-color-rgb: 255, 255, 255;
+  /* フォント関係 */
+  font-size: calc(100vw / 32);
+}
+</style>
 
 <style scoped>
 .full-fill {
