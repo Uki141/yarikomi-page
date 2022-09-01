@@ -1,6 +1,21 @@
 <template>
-  <v-container id="Home" fluid class="pa-0">
-    <HomeTopSection />
+  <FluidFillContainer id="Home">
+    <FloatingSquareBtn v-if="$vuetify.breakpoint.smAndDown" :size="52" :right="0" :top="0" :elevation="0"
+      style="z-index: 100; background-color: rgba(0, 0, 0, 0.4);" @click="onBtnClick">
+      <v-icon color="white">mdi-menu</v-icon>
+    </FloatingSquareBtn>
+    <NavigationAppbar v-else scroll-target="#HomeContent"></NavigationAppbar>
+
+    <FluidFillContainer id="HomeContent" class="overflow-y-auto">
+      <HomeTop></HomeTop>
+      <FluidFillContainer tag="article" class="">
+      </FluidFillContainer>
+    </FluidFillContainer>
+
+    <HomeMenuOverlay v-if="$vuetify.breakpoint.smAndDown" :show="overlay"></HomeMenuOverlay>
+
+
+    <!-- <HomeTopSection />
 
     <HomeArticle :half-height="true">
       <template #title>
@@ -56,11 +71,18 @@
       <template #heading>
         部員募集中！
       </template>
-    </HomeInfomation>
-  </v-container>
+    </HomeInfomation> -->
+  </FluidFillContainer>
 </template>
 
 <script>
+import FluidFillContainer from "@/components/templates/containers/FluidFillContainer.vue"
+
+import FloatingSquareBtn from "@/components/organisms/btn/FloatingSquareBtn.vue"
+import NavigationAppbar from "@/components/organisms/appbar/NavigationAppbar.vue"
+import HomeMenuOverlay from "@/components/templates/overlay/HomeMenuOverlay.vue"
+
+import HomeTop from "@/components/templates/HomeTop.vue"
 import HomeTopSection from "@/components/templates/HomeTopSection.vue"
 import HomeArticle from "@/components/templates/HomeArticle.vue"
 import HomeGames from "@/components/templates/HomeGames.vue"
@@ -68,16 +90,23 @@ import HomeInfomation from "@/components/templates/HomeInfomation.vue"
 
 export default {
   components: {
-    HomeTopSection,
-    HomeArticle,
-    HomeGames,
-    HomeInfomation
+    FluidFillContainer,
+    FloatingSquareBtn,
+    NavigationAppbar,
+    HomeMenuOverlay,
+    HomeTop,
+    // HomeTopSection,
+    // HomeArticle,
+    // HomeGames,
+    // HomeInfomation
+  },
+  data: () => ({
+    overlay: false,
+  }),
+  methods: {
+    onBtnClick() {
+      this.overlay = !this.overlay
+    }
   }
 }
 </script>
-
-<style scoped>
-.full-fill {
-  height: 100vh;
-}
-</style>

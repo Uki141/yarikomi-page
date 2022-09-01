@@ -12,6 +12,10 @@ import aos_css from "aos/dist/aos.css";
 import lazysizes from "lazysizes";
 import unveilhooks from "lazysizes/plugins/unveilhooks/ls.unveilhooks.min.js";
 
+import ApiCommons from "@/api/ApiCommons.js"
+
+Vue.prototype.$api = ApiCommons;
+
 Vue.config.productionTip = false;
 Vue.use(VueSmoothScroll, {
   duration: 1200,
