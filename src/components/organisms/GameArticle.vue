@@ -1,23 +1,36 @@
 <template>
-  <div class="game-article d-flex flex-column" :style="styles">
-    <h1 class="mt-5 ml-5" data-aos="fade-right" data-aos-duration="1500">
+  <div
+    class="game-article d-flex flex-column"
+    :style="styles">
+    <h1
+      class="mt-5 ml-5"
+      data-aos="fade-right"
+      data-aos-duration="1500">
       <span class="game-article-title px-5">
-        <slot name="title"></slot>
+        <slot name="title" />
       </span>
     </h1>
-    <h2 class="ml-10" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="300">
+    <h2
+      class="ml-10"
+      data-aos="fade-right"
+      data-aos-duration="1500"
+      data-aos-delay="300">
       <span class="game-article-subtitle">
-        <slot name="subtitle"></slot>
+        <slot name="subtitle" />
       </span>
     </h2>
     <div class="game-article-content d-flex justify-center mt-12 mx-6">
       <v-row class="d-flex">
-        <v-col class="col-6 game-article-text" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
-          <slot name="main"></slot>
+        <v-col
+          class="col-6 game-article-text"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+          data-aos-delay="500">
+          <slot name="main" />
         </v-col>
         <v-col class="col-6 d-flex flex-column align-center">
           <p>movie</p>
-          <slot name="media"></slot>
+          <slot name="media" />
         </v-col>
       </v-row>
     </div>
@@ -45,7 +58,7 @@ export default {
       }
     }
   }
-};
+}
 </script>
 
 <style scoped>

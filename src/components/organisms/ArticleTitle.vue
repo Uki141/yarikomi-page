@@ -1,7 +1,10 @@
 <template>
-  <div class="article-title" :style="styles" :class="{ 'article-title-right': justifyRight }">
+  <div
+    class="article-title"
+    :style="styles"
+    :class="{ 'article-title-right': justifyRight }">
     <span>
-      <slot></slot>
+      <slot />
     </span>
   </div>
 </template>
@@ -45,7 +48,7 @@ export default {
       }
     }
   }
-};
+}
 </script>
 
 <style scoped>

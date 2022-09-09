@@ -1,12 +1,15 @@
 <template>
-  <div class="top-title d-flex flex-column" data-aos="fade-right" data-aos-duration="1500">
+  <div
+    class="top-title d-flex flex-column"
+    data-aos="fade-right"
+    data-aos-duration="1500">
     <div class="top-title-subtitle">
-      <slot name="subtitle"></slot>
+      <slot name="subtitle" />
     </div>
     <div class="top-title-title mt-n16 d-flex">
-      <slot></slot>
+      <slot />
       <div class="top-title-annotation align-self-end">
-        <slot name="annotation"></slot>
+        <slot name="annotation" />
       </div>
     </div>
   </div>

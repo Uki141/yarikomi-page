@@ -1,8 +1,11 @@
 <template>
-  <div class="top-subtitle d-flex flex-column mt-12" data-aos="fade-right" data-aos-duration="1500"
+  <div
+    class="top-subtitle d-flex flex-column mt-12"
+    data-aos="fade-right"
+    data-aos-duration="1500"
     data-aos-delay="200">
     <div class="top-subtitle-content ml-12">
-      <slot></slot>
+      <slot />
     </div>
   </div>
 </template>

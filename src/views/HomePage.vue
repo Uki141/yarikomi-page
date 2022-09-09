@@ -1,19 +1,39 @@
 <template>
   <FluidFillContainer id="Home">
-    <FloatingSquareBtn v-if="$vuetify.breakpoint.smAndDown" :size="52" :right="0" :top="0" :elevation="0"
-      style="z-index: 100; background-color: rgba(0, 0, 0, 0.4);" @click="onBtnClick">
-      <v-icon color="white">mdi-menu</v-icon>
+    <FloatingSquareBtn
+      v-if="$vuetify.breakpoint.smAndDown"
+      :size="52"
+      :right="0"
+      :top="0"
+      :elevation="0"
+      style="z-index: 100; background-color:  rgba(0, 0, 0, 0.4);"
+      @click="onBtnClick">
+      <v-icon color="white">
+        mdi-menu
+      </v-icon>
     </FloatingSquareBtn>
-    <NavigationAppbar v-else scroll-target="#HomeContent"></NavigationAppbar>
+    <NavigationAppbar
+      v-else
+      scroll-target="#HomeContent" />
 
-    <FluidFillContainer id="HomeContent" class="overflow-y-auto">
-      <HomeTop></HomeTop>
-      <FluidFillContainer tag="article" class="">
-      </FluidFillContainer>
+    <FluidFillContainer
+      id="HomeContent"
+      class="overflow-y-auto">
+      <!-- トップ -->
+      <HomeTop
+        id="HomeTop"
+        next-article-id="HomeInfomation" />
+      <HomeInfomation
+        id="HomeInfomation"
+        next-article-id="HomeInfo" />
+      <FluidFillContainer
+        id="HomeInfo"
+        tag="article" />
     </FluidFillContainer>
 
-    <HomeMenuOverlay v-if="$vuetify.breakpoint.smAndDown" :show="overlay"></HomeMenuOverlay>
-
+    <HomeMenuOverlay
+      v-if="$vuetify.breakpoint.smAndDown"
+      :show="overlay" />
 
     <!-- <HomeTopSection />
 
@@ -52,8 +72,8 @@
           </ul>
           <li>チャット交流</li>
           <ul>
-            <li>Twitterに書くほどでもない自慢　とか</li>
-            <li>誰かと共有したいこと　とか</li>
+            <li>Twitterに書くほどでもない自慢 とか</li>
+            <li>誰かと共有したいこと とか</li>
             しようもない事でも話せる場をつくります
           </ul>
           <li>月例大会開催</li>
@@ -83,10 +103,10 @@ import NavigationAppbar from "@/components/organisms/appbar/NavigationAppbar.vue
 import HomeMenuOverlay from "@/components/templates/overlay/HomeMenuOverlay.vue"
 
 import HomeTop from "@/components/templates/HomeTop.vue"
-import HomeTopSection from "@/components/templates/HomeTopSection.vue"
-import HomeArticle from "@/components/templates/HomeArticle.vue"
-import HomeGames from "@/components/templates/HomeGames.vue"
 import HomeInfomation from "@/components/templates/HomeInfomation.vue"
+// import HomeTopSection from "@/components/templates/HomeTopSection.vue"
+// import HomeArticle from "@/components/templates/HomeArticle.vue"
+// import HomeGames from "@/components/templates/HomeGames.vue"
 
 export default {
   components: {
@@ -95,10 +115,10 @@ export default {
     NavigationAppbar,
     HomeMenuOverlay,
     HomeTop,
+    HomeInfomation,
     // HomeTopSection,
     // HomeArticle,
     // HomeGames,
-    // HomeInfomation
   },
   data: () => ({
     overlay: false,
@@ -106,7 +126,25 @@ export default {
   methods: {
     onBtnClick() {
       this.overlay = !this.overlay
+    },
+    onClick() {
+      const scrollTo = document.getElementById("HomeInfo")
+      const scrollTarget = document.getElementById("HomeContent")
+      this.$smoothScroll({
+        scrollTo: scrollTo,
+        hash: "#HomeInfo",
+        container: scrollTarget,
+      })
+    },
+    onIntersect (entries, observer, isIntersecting) {
+      console.log(entries, observer, isIntersecting)
     }
   }
 }
 </script>
+
+<style scoped>
+.test-anc {
+  position: absolute;
+}
+</style>

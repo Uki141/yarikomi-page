@@ -1,11 +1,17 @@
 <template>
-  <SquareBtn :size="size" absolute :style="STYLE" :elevation="elevation" v-bind="$attrs" v-on="$listeners">
+  <SquareBtn
+    :size="size"
+    absolute
+    :style="STYLE"
+    :elevation="elevation"
+    v-bind="$attrs"
+    v-on="$listeners">
     <slot />
   </SquareBtn>
 </template>
 
 <script>
-import SquareBtn from '@/components/atoms/btn/SquareBtn.vue';
+import SquareBtn from '@/components/atoms/btn/SquareBtn.vue'
 
 export default {
   components: {
@@ -29,7 +35,7 @@ export default {
       }
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

@@ -1,11 +1,17 @@
 <template>
-  <v-container fluid class="home-top-section lazyload">
+  <v-container
+    fluid
+    class="home-top-section lazyload">
     <v-row>
       <v-col class="col-12 full-height d-flex flex-column justify-center">
         <TopTitle>
-          <template #subtitle>音ゲーサークル</template>
+          <template #subtitle>
+            音ゲーサークル
+          </template>
           <template>やりこみ</template>
-          <template #annotation>(仮称)</template>
+          <template #annotation>
+            (仮称)
+          </template>
         </TopTitle>
 
         <TopSubTitle>

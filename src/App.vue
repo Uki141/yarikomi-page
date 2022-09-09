@@ -14,14 +14,14 @@ export default {
   data: () => ({
     //
   }),
-};
+}
 </script>
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
 
 :root {
-  font-size: 16px;
+  font-size: 0.73vw;
 }
 
 #VMain {
@@ -42,4 +42,12 @@ html {
 
   box-sizing: border-box;
 }
+
+/* スマホサイズの共通定義 */
+@media screen and (max-width: 425px) {
+  .mobile-padding {
+    padding-bottom: 10%;
+  }
+}
+
 </style>

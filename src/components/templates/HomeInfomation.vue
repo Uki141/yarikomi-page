@@ -1,75 +1,112 @@
 <template>
-  <v-container fluid class="home-infomation">
-    <v-row class="home-infomation-row d-flex align-center" data-aos="zoom-out-down" data-aos-duration="1500">
-      <v-col class="col-1"></v-col>
-      <v-col class="home-infomation-heading animate__animated animate__pulse animate__slow animate__infinite">
-        <span>
-          <slot name="heading"></slot>
-        </span>
-      </v-col>
-      <v-col class="col-1"></v-col>
-    </v-row>
-    <v-row class="d-flex justify-center">
-      <img src="@/assets/img/googlechat.png" class="google-chat-img" />
-    </v-row>
-  </v-container>
+  <FullWidthContainer
+    tag="article"
+    class="home-information pt-16">
+    <div
+      class="mt-8 d-flex flex-column">
+      <v-row no-gutters>
+        <v-spacer />
+        <v-col
+          md="10"
+          lg="5">
+          <div
+            class="d-flex flex-column align-start">
+            <div class="info-title mb-4">
+              <h3>音ゲーサークル「やりこみ」とは</h3>
+            </div>
+            <div class="info-area d-flex flex-column align-start pa-4">
+              <div class="info-text mb-4">
+                <span>株式会社こだわりの<b>"音ゲー"好き</b>が集まる場所</span>
+              </div>
+
+              <div class="info-text mb-4">
+                <span>「交流」と「成長」を目的とし、楽しみながら音ゲーを「やりこむ」サークルです。</span>
+                <ul>
+                  <li><b>音ゲー</b>に興味がある方</li>
+                  <li>普段<b>カジュアル</b>にプレイしている方</li>
+                  <li>引かれるくらい<b>やりこんでいる</b>方</li>
+                </ul>
+                <span>どんなスタイルでも楽しめる活動を目指しています！</span>
+              </div>
+
+              <div class="info-text mb-4">
+                <span><b>サークルメンバー絶賛</b>募集中！</span>
+                <span>興味のある方は、<b>代表まで</b>ご連絡ください！</span>
+              </div>
+            </div>
+          </div>
+        </v-col>
+        <v-col
+          v-if="$vuetify.breakpoint.lgAndUp"
+          cols="4" />
+        <v-spacer />
+      </v-row>
+      <div class="py-4">
+        <SmoothScrollBtn
+          :id-to="nextArticleId"
+          id-contianer="HomeContent"
+          icon="mdi-arrow-down-thick"
+          color="#1A2E40"
+          dark
+          fixed
+          x-center />
+      </div>
+    </div>
+  </FullWidthContainer>
 </template>
 
 <script>
-export default {
+import FullWidthContainer from '@/components/templates/containers/FullWidthContainer.vue'
+import SmoothScrollBtn from "@/components/organisms/btn/SmoothScrollBtn.vue"
 
+export default {
+  components: {
+    FullWidthContainer,
+    SmoothScrollBtn,
+  },
+  props: {
+    nextArticleId: {type: String, required: false, default: null},
+  }
 }
 </script>
 
-<style scoped>
-.home-infomation {
-  height: 100vh;
-  background-color: #1A2E40;
+<style lang="scss" scoped>
+.home-information{
+  background: url("@/assets/img/bg_neon02_dark.jpg") no-repeat center center / cover;
+  color: #fff;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 1rem;
 }
 
-.home-infomation-row {
-  min-height: 50%;
+.info-title {
+  font-size: min(6.5rem, 32px);
+  white-space: nowrap;
+  border: 2px solid #fff;
+  padding: 5px 10px;
+  background-color: rgba($color: #000000, $alpha: 0.4);
+  transform: rotate(0.025turn) skew(0deg, -10deg);
 }
 
-.home-infomation-heading {
-  position: relative;
-  padding: 1.5rem 2rem;
-  border: 3px solid #d8d8d8;
-  border-radius: 10px;
-  background: #f9f9f9;
-
-  font-size: 12vh;
-  font-family: 'Zen Kaku Gothic New', Courier, monospace;
-  font-weight: bold;
-  text-align: center;
+.info-title::first-letter {
+  font-size: min(7rem, 36px);
+  color: #22A2F2;
 }
 
-.home-infomation-heading:before {
-  position: absolute;
-  bottom: -14px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  content: '';
-  border-width: 14px 12px 0 12px;
-  border-style: solid;
-  border-color: #d8d8d8 transparent transparent transparent;
+.info-area {
+  border: 2px dotted #fff;
+  padding: 5px 10px;
+  background-color: rgba($color: #000000, $alpha: 0.4);
 }
 
-.home-infomation-heading:after {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  width: 0;
-  height: 0;
-  content: '';
-  border-width: 14px 12px 0 12px;
-  border-style: solid;
-  border-color: #f9f9f9 transparent transparent transparent;
+.info-text {
+  font-size: min(5rem, 20px);
 }
 
-.google-chat-img {
-  height: 40%;
-  max-height: 40%;
+.info-text b {
+  font-weight: 600;
+}
+
+.info-text > span {
+  display: block;
 }
 </style>

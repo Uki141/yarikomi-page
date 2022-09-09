@@ -1,5 +1,8 @@
 <template>
-  <v-overlay color="#ececec" :z-index="0" :value="overlay">
+  <v-overlay
+    color="#ececec"
+    :z-index="0"
+    :value="overlay">
     <span>Text here</span>
   </v-overlay>
 </template>
@@ -15,11 +18,11 @@ export default {
         return this.show
       },
       set(value) {
-        this.$emit("update:show", value);
+        this.$emit("update:show", value)
       }
     }
   }
-};
+}
 </script>
 
 <style lang="scss" scoped>

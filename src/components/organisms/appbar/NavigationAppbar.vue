@@ -1,10 +1,15 @@
 <template>
-  <v-app-bar dark color="#e6e6e633" absolute inverted-scroll :scroll-target="scrollTarget">
-    <v-app-bar-nav-icon></v-app-bar-nav-icon>
+  <v-app-bar
+    dark
+    color="#e6e6e633"
+    absolute
+    inverted-scroll
+    :scroll-target="scrollTarget">
+    <v-app-bar-nav-icon />
 
     <v-toolbar-title>Title</v-toolbar-title>
 
-    <v-spacer></v-spacer>
+    <v-spacer />
 
     <v-btn icon>
       <v-icon>mdi-magnify</v-icon>
@@ -25,7 +30,7 @@ export default {
   props: {
     scrollTarget: { type: String, required: true, default: null },
   }
-};
+}
 </script>
 
 <style scoped>
