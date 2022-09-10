@@ -4,8 +4,8 @@
     :fixed="!absolute && fixed"
     :fab="fab"
     :dark="dark"
-    :width="width"
-    :height="height"
+    :width="_width"
+    :height="_height"
     :color="color"
     :style="STYLE"
     :class="{'x-center': xCenter,
@@ -29,6 +29,7 @@ export default {
     fixed: {type: Boolean, required: false, default: false},
     fab: {type: Boolean, required: false, default: true},
     dark: {type: Boolean, required: false, default: false},
+    size: { type: [String, Number], required: false, default: 50 },
     width: {type: [String, Number], required: false, default: null},
     height: {type: [String, Number], required: false, default: null},
     color: {type: String, required: false, default: null},
@@ -46,6 +47,18 @@ export default {
       const top = isNaN(this.top)?this.top:this.top+"px"
       const bottom = isNaN(this.bottom)?this.bottom:this.bottom+"px"
       return { left, right, top, bottom }
+    },
+    _width() {
+      if (this.size){
+        return this.size
+      }
+      return this.width
+    },
+    _height() {
+      if (this.size){
+        return this.size
+      }
+      return this.height
     }
   },
   methods: {

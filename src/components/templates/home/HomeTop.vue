@@ -14,7 +14,7 @@
       </div>
     </div>
     <div
-      class="full-width flex-grow-0 py-4">
+      class="full-width flex-grow-0 py-8">
       <SmoothScrollBtn
         :id-to="nextArticleId"
         id-contianer="HomeContent"

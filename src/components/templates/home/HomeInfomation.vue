@@ -6,9 +6,7 @@
       class="mt-8 d-flex flex-column">
       <v-row no-gutters>
         <v-spacer />
-        <v-col
-          md="10"
-          lg="5">
+        <v-col>  
           <div
             class="d-flex flex-column align-start">
             <div class="info-title mb-4">
@@ -36,9 +34,6 @@
             </div>
           </div>
         </v-col>
-        <v-col
-          v-if="$vuetify.breakpoint.lgAndUp"
-          cols="4" />
         <v-spacer />
       </v-row>
       <div class="py-4">
@@ -58,7 +53,6 @@
 <script>
 import FullWidthContainer from '@/components/templates/containers/FullWidthContainer.vue'
 import SmoothScrollBtn from "@/components/organisms/btn/SmoothScrollBtn.vue"
-
 export default {
   components: {
     FullWidthContainer,
@@ -88,7 +82,6 @@ export default {
 }
 
 .info-title::first-letter {
-  font-size: min(7rem, 36px);
   color: #22A2F2;
 }
 

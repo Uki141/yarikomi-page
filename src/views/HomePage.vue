@@ -25,10 +25,13 @@
         next-article-id="HomeInfomation" />
       <HomeInfomation
         id="HomeInfomation"
-        next-article-id="HomeInfo" />
-      <FluidFillContainer
-        id="HomeInfo"
-        tag="article" />
+        next-article-id="HomeActivity" />
+      <HomeActiviry
+        id="HomeActivity"
+        next-article-id="HomeMember" />
+      <HomeMember
+        id="HomeMember" />
+      <GeneralFooter />
     </FluidFillContainer>
 
     <HomeMenuOverlay
@@ -102,8 +105,12 @@ import FloatingSquareBtn from "@/components/organisms/btn/FloatingSquareBtn.vue"
 import NavigationAppbar from "@/components/organisms/appbar/NavigationAppbar.vue"
 import HomeMenuOverlay from "@/components/templates/overlay/HomeMenuOverlay.vue"
 
-import HomeTop from "@/components/templates/HomeTop.vue"
-import HomeInfomation from "@/components/templates/HomeInfomation.vue"
+import HomeTop from "@/components/templates/home/HomeTop.vue"
+import HomeInfomation from "@/components/templates/home/HomeInfomation.vue"
+import HomeActiviry from "@/components/templates/home/HomeActivity.vue"
+import HomeMember from "@/components/templates/home/HomeMember.vue"
+
+import GeneralFooter from "@/components/templates/GeneralFooter.vue"
 // import HomeTopSection from "@/components/templates/HomeTopSection.vue"
 // import HomeArticle from "@/components/templates/HomeArticle.vue"
 // import HomeGames from "@/components/templates/HomeGames.vue"
@@ -116,6 +123,9 @@ export default {
     HomeMenuOverlay,
     HomeTop,
     HomeInfomation,
+    HomeActiviry,
+    GeneralFooter,
+    HomeMember,
     // HomeTopSection,
     // HomeArticle,
     // HomeGames,
@@ -127,18 +137,6 @@ export default {
     onBtnClick() {
       this.overlay = !this.overlay
     },
-    onClick() {
-      const scrollTo = document.getElementById("HomeInfo")
-      const scrollTarget = document.getElementById("HomeContent")
-      this.$smoothScroll({
-        scrollTo: scrollTo,
-        hash: "#HomeInfo",
-        container: scrollTarget,
-      })
-    },
-    onIntersect (entries, observer, isIntersecting) {
-      console.log(entries, observer, isIntersecting)
-    }
   }
 }
 </script>

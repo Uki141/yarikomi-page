@@ -124,7 +124,7 @@ export default {
 }
 
 .slogan-1 {
-  transform: translateY(-120%) rotate(0.005turn);
+  transform: translateY(-100%) rotate(0.005turn);
 }
 
 @media screen and (max-height: 640px) {
