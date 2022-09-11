@@ -34,6 +34,17 @@ html {
   background-color: #06080D;
 }
 
+body {
+  /* bodyでスクロールしない */
+  overflow: hidden;
+  scrollbar-width: none; /*Firefox対応のスクロールバー非表示コード*/  
+  -ms-overflow-style: none;/*Internet Explore対応のスクロールバー非表示コード*/   
+}
+
+body::-webkit-scrollbar {  
+  display: none; /*Google Chrome、Safari、Microsoft Edge対応のスクロールバー非表示コード*/
+}
+
 * {
   background-position: center center;
   background-repeat: no-repeat;
