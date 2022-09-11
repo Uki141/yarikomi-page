@@ -47,7 +47,7 @@
       <div
         class="top-title d-flex flex-column skew-bg py-12"
         data-aos="fade-right">
-        <div class="top-title-subtitle">
+        <div class="top-title-subtitle ml-3">
           {{ subTitle }}
         </div>
         <div class="top-title-title mt-n16 d-flex">
@@ -86,7 +86,7 @@ export default {
 }
 
 .sub-title {
-  font-size: clamp(16px, 6rem, 32px);
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 3px;
   font-family: 'Zen Kaku Gothic New', sans-serif;
@@ -94,7 +94,7 @@ export default {
 
 .main-title {
   padding: 0 1rem;
-  font-size: clamp(60px, 22rem, 100px);
+  font-size: 4rem;
   column-gap: 2vw;
   color: #fff;
   font-family: 'gagagaga', 'RocknRoll One', sans-serif;
@@ -110,9 +110,9 @@ export default {
 
 .slogan-1,
 .slogan-2 {
-  font-size: clamp(20px, 9rem, 30px);
+  font-size: 1.5rem;
   height: fit-content;
-  padding: 5rem 1rem;
+  padding: 1rem 0.5rem;
   border: 2px solid rgba(255, 255, 255, 0.5);
   background-color: rgba($color: #000000, $alpha: 0.4);
   clip-path: polygon(0% 0%, 65% 0%, 100% 10%, 100% 100%, 30% 100%, 0% 90%);
@@ -120,11 +120,11 @@ export default {
 }
 
 .slogan-2 {
-  transform: translateY(80%) rotate(0.005turn);
+  transform: translateY(12rem) rotate(0.005turn);
 }
 
 .slogan-1 {
-  transform: translateY(-100%) rotate(0.005turn);
+  transform: translateY(-12rem) rotate(0.005turn);
 }
 
 @media screen and (max-height: 640px) {
@@ -140,11 +140,11 @@ export default {
 // デスクトップ用
 .skew-bg {
   background-color: rgba(6, 8, 13, 70%);
-  clip-path: polygon(0% 100%, 0% 0%, 75% 0%, 90% 100%);
+  clip-path: polygon(0% 100%, 0% 0%, calc(100% - 25vw) 0%, calc(100% - 10vw) 100%);
 }
 
 .top-title {
-  font-size: 7rem;
+  font-size: 6rem;
   min-width: 1280px;
   color: #fff;
 }
@@ -164,7 +164,7 @@ export default {
 .top-title-annotation {
   color: #fff;
   -webkit-text-stroke: 0px #1A2E40;
-  font-size: 0.15em;
+  font-size: 0.3em;
   font-family: 'Zen Kaku Gothic New', sans-serif;
 }
 </style>

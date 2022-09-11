@@ -1,9 +1,12 @@
 <template>
   <FullWidthContainer id="Footer">
     <v-container fluid>
-      <v-row>
-        <v-col cols="4">
-          <h2>やりこみ</h2>
+      <v-row class="pb-4">
+        <v-col cols="6">
+          <a
+            v-smooth-scroll="{scrollTo: '#HomeTop', container: '#HomeContent'}"
+            class="footer-title"
+            href="#HomeTop">やりこみ</a>
         </v-col>
         <v-divider
           vertical
@@ -47,10 +50,16 @@ export default {
 #Footer {
   background-color: #151727; 
   color: #fff;
+}
+
+.footer-title {
   font-size: 2rem;
+  text-decoration: none;
+  color: #22A2F2;
+  font-family: 'gagagaga', 'RocknRoll One', sans-serif;
 }
 
 .footer-address {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 </style>

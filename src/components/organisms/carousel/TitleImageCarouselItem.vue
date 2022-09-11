@@ -1,15 +1,17 @@
 <template>
   <v-carousel-item>
     <v-sheet
+      width="100%"
       height="100%"
-      tile>
+      tile
+      v-on="$listeners">
       <div
         :style="STYLES"
         class="bg-image pa-3"
         justify="center">
         <div
           v-if="!!title"
-          class="carousel-title py-2 px-10">
+          class="carousel-title py-1 px-6">
           <span>{{ title }}</span>
         </div>
       </div>
@@ -35,18 +37,17 @@ export default {
 <style scoped>
   .carousel-title {
     width: fit-content;
-    background-color: #2466e0;
+    background-color: #3032c5;
     border: 2px solid rgb(0, 0, 0);
     color: rgb(255, 255, 255);
     font-family: 'Zen Kaku Gothic New', sans-serif;
-    font-size: min(3rem, 24px);
+    font-size: 1rem;
     font-weight: 600;
     transform: rotate(0.025turn) skew(0deg, -10deg);
   }
 
   .bg-image {
-    aspect-ratio: 16/9;
-    height: auto;
+    height: 100%;
     width: 100%;
     background-repeat: no-repeat;
     background-attachment: local;

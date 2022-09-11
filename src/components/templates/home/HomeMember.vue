@@ -1,34 +1,29 @@
 <template>
   <FullWidthContainer
     tag="article"
-    class="home-activity pt-16">
+    class="home-member pt-4 pt-lg-16">
     <div
       class="mt-8 d-flex flex-column">
       <v-row no-gutters>
-        <v-spacer />
-        <v-col
-          cols="10"
-          lg="5">
+        <v-col class="px-6 d-flex justify-center">
           <div
-            class="d-flex flex-column align-start">
-            <div class="info-title mb-4 px-16">
-              <h3>Member</h3>
+            class="d-flex flex-column align-center member-container">
+            <div class="member-title mb-4 py-1 px-8 px-lg-16 align-self-start">
+              <span>member</span>
             </div>
-            <v-carousel
-              cycle
-              hide-delimiter-background
-              delimiter-icon="mdi-minus">
-              <template
-                v-for="(content, i) in contents">
-                <TitleImageCarouselItem
-                  :key="i"
-                  :title="content.title"
-                  :img-src="content.src" />
-              </template>
-            </v-carousel>
+            <div
+              class="mamber-container d-flex flex-wrap justify-center">
+              <PortraitCard 
+                v-for="(member, i) in members"
+                :key="i"
+                width="300px"
+                :name="member.name"
+                :portrait="member.portrait"
+                :games="member.games"
+                :article="member.article" />
+            </div>
           </div>
         </v-col>
-        <v-spacer />
       </v-row>
       <div class="py-4">
         <SmoothScrollBtn
@@ -48,64 +43,57 @@
 <script>
 import FullWidthContainer from '@/components/templates/containers/FullWidthContainer.vue'
 import SmoothScrollBtn from "@/components/organisms/btn/SmoothScrollBtn.vue"
-import TitleImageCarouselItem from "@/components/organisms/carousel/TitleImageCarouselItem.vue"
+import PortraitCard from "@/components/organisms/card/PortraitCard.vue"
 
 export default {
   components: {
     FullWidthContainer,
     SmoothScrollBtn,
-    TitleImageCarouselItem,
+    PortraitCard,
   },
   props: {
     nextArticleId: {type: String, required: false, default: null},
   },
   data: () => ({
-    contents: [
-      {title: "オフライン交流会", src: "img/immigrant.jpg"},
-      {title: "チャット", src: "img/slack_zatsudan.png"},
-      {title: "オフライン大会", src: "img/slack_ss_mosaic.png"},
-    ]
-  })
+    // TODO: API化(外部から取得)
+    members: [
+      {name: "y", games: ["Beatmania iidx", "MUSECA", "オンゲキ"], article: "サークル長です。", portrait: "img/defalut_portrait.jpg"},
+      {name: "s", games: ["Beatmania iidx", "CROSS×BEATS"], article: "立ち上げを勧めました。"},
+      {name: "m", games: ["SOUND VOLTEX"], article: "ボルテメインです。"},
+      {name: "o", games: ["テニラビ", "DEEMO"], article: "スマホメインです。"},
+    ],
+  }),
 }
 </script>
 
 <style lang="scss" scoped>
-.home-activity{
-  background: rgb(2,0,36);
-  background: linear-gradient(335deg, rgba(2,0,36,1) 0%, rgba(19,17,51,1) 64%, rgba(63,62,87,1) 89%, rgba(108,114,134,1) 100%);
+.home-member{
+  background-image: url("@/assets/img/bg_neon04.jpg");
   color: #fff;
   font-family: 'Zen Kaku Gothic New', sans-serif;
   font-size: 1rem;
 }
 
-.info-title {
-  font-size: min(6.5rem, 32px);
+.member-container{
+  width: 80%;
+}
+
+.member-title {
+  font-size: 2rem;
+  font-weight: 600;
   white-space: nowrap;
   border: 2px solid #fff;
-  padding: 5px 10px;
   background-color: rgba($color: #000000, $alpha: 0.4);
   transform: rotate(0.025turn) skew(0deg, -10deg);
 }
 
-.info-title::first-letter {
+.member-title::first-letter {
+  font-size: 2.1rem;
   color: #22A2F2;
 }
 
-.info-area {
-  border: 2px dotted #fff;
-  padding: 5px 10px;
-  background-color: rgba($color: #000000, $alpha: 0.4);
+.mamber-container {
+  gap: 1rem;
 }
 
-.info-text {
-  font-size: min(5rem, 20px);
-}
-
-.info-text b {
-  font-weight: 600;
-}
-
-.info-text > span {
-  display: block;
-}
 </style>

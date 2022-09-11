@@ -12,7 +12,9 @@
              'y-center': yCenter}"
     class="hidden-on-landscape"
     @click="onClick">
-    <v-icon v-if="!!icon">
+    <v-icon
+      v-if="!!icon"
+      size="1.5rem">
       {{ icon }}
     </v-icon>
     <slot />
@@ -29,7 +31,7 @@ export default {
     fixed: {type: Boolean, required: false, default: false},
     fab: {type: Boolean, required: false, default: true},
     dark: {type: Boolean, required: false, default: false},
-    size: { type: [String, Number], required: false, default: 50 },
+    size: { type: [String, Number], required: false, default: "3rem" },
     width: {type: [String, Number], required: false, default: null},
     height: {type: [String, Number], required: false, default: null},
     color: {type: String, required: false, default: null},
@@ -85,7 +87,7 @@ export default {
     transform: translateY(-50%);
   }
 
-@media (orientation: landscape) and (max-height: 400px){
+@media (orientation: landscape) and (max-height: 430px){
   .hidden-on-landscape{
     display: none;
   }

@@ -20,13 +20,13 @@ export default {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
 
-:root {
-  font-size: 0.73vw;
-}
-
 #VMain {
   height: 100vh;
   width: 100vw;
+}
+
+:root {
+  font-size: calc(15px + 0.390625vw);
 }
 
 html {
@@ -37,7 +37,7 @@ html {
 * {
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: local;
   background-size: cover;
 
   box-sizing: border-box;

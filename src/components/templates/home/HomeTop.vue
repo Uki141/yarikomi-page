@@ -41,14 +41,6 @@ export default {
   props: {
     nextArticleId: {type: String, required: false, default: null},
   },
-  data: () => ({
-    env: process.env
-  }),
-  mounted() {
-    console.log(this.env)
-    console.log(this.$route.path)
-    console.log(this.$route.name)
-  }
 }
 </script>
 

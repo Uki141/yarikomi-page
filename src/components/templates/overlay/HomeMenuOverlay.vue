@@ -3,7 +3,7 @@
     color="#ececec"
     :z-index="0"
     :value="overlay">
-    <span>Text here</span>
+    <span>整備中</span>
   </v-overlay>
 </template>
 
