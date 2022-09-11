@@ -114,6 +114,10 @@ export default {
   color: #22A2F2;
 }
 
+.activity-container {
+  max-width: 1280px;
+}
+
 .activity-carousel {
   width: 100%;
   height: auto !important; 
