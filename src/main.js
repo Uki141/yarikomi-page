@@ -6,7 +6,6 @@ import vuetify from "./plugins/vuetify"
 import "@/assets/load-font.css"
 
 import VueSmoothScroll from "vue2-smooth-scroll"
-import animate from "animate.css"
 import AOS from "aos"
 import aos_css from "aos/dist/aos.css"
 import lazysizes from "lazysizes"
@@ -29,7 +28,6 @@ Vue.use(VueSmoothScroll, vScrollConfig)
 new Vue({
   router,
   vuetify,
-  animate,
   aos_css,
   lazysizes,
   unveilhooks,
