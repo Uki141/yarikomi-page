@@ -29,7 +29,7 @@
           cols="6"
           class="d-flex flex-column justify-end">
           <div class="d-flex justify-end">
-            <span>🄫 KODAWARI.inc allright reserved</span>
+            <span>&copy;KODAWARI.inc allright reserved</span>
           </div>
         </v-col>
       </v-row>
