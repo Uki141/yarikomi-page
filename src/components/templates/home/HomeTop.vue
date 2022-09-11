@@ -40,6 +40,12 @@ export default {
   },
   props: {
     nextArticleId: {type: String, required: false, default: null},
+  },
+  data: () => ({
+    env: process.env
+  }),
+  mounted() {
+    console.log(this.env)
   }
 }
 </script>
