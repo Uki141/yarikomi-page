@@ -21,7 +21,7 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&family=Zen+Antique+Soft&family=Zen+Kaku+Gothic+New:wght@400;700&display=swap');
 
 #VMain {
-  height: 100vh;
+  height: 95vh;
   width: 100vw;
 }
 

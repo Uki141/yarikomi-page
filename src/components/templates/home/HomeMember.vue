@@ -7,9 +7,9 @@
       <v-row no-gutters>
         <v-col class="px-6 d-flex justify-center">
           <div
-            class="d-flex flex-column align-center member-container">
+            class="d-flex flex-column align-center member-container px-0 px-lg-16">
             <div class="member-title mb-4 py-1 px-8 px-lg-16 align-self-start">
-              <span>member</span>
+              <span>Member</span>
             </div>
             <div
               class="mamber-container d-flex flex-wrap justify-center">
@@ -57,7 +57,7 @@ export default {
   data: () => ({
     // TODO: API化(外部から取得)
     members: [
-      {name: "y", games: ["Beatmania iidx", "MUSECA", "オンゲキ"], article: "サークル長です。", portrait: "img/defalut_portrait.jpg"},
+      {name: "y", games: ["Beatmania iidx", "MUSECA", "オンゲキ"], article: "サークル長です。", portrait: "img/y_kupuro.png"},
       {name: "s", games: ["Beatmania iidx", "CROSS×BEATS"], article: "立ち上げを勧めました。"},
       {name: "m", games: ["SOUND VOLTEX"], article: "ボルテメインです。"},
       {name: "o", games: ["テニラビ", "DEEMO"], article: "スマホメインです。"},
@@ -75,11 +75,11 @@ export default {
 }
 
 .member-container{
-  width: 80%;
+  width: 100%;
 }
 
 .member-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 600;
   white-space: nowrap;
   border: 2px solid #fff;

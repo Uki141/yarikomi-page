@@ -7,7 +7,7 @@
       <v-row no-gutters>
         <v-col class="px-6 d-flex justify-center">
           <div
-            class="d-flex flex-column align-center activity-container">
+            class="d-flex flex-column align-center activity-container px-0 px-lg-16">
             <div class="activity-title mb-4 py-1 px-8 px-lg-16 align-self-start">
               <span>Activity</span>
             </div>
@@ -97,11 +97,11 @@ export default {
 }
 
 .activity-container{
-  width: 80%;
+  width: 100%;
 }
 
 .activity-title {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 600;
   white-space: nowrap;
   border: 2px solid #fff;

@@ -8,6 +8,7 @@
       <v-img
         :src="portrait"
         width="100%"
+        position="center center"
         aspect-ratio="1" />
     </div>
     <v-card-text>
