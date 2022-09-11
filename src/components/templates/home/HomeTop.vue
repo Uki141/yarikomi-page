@@ -46,6 +46,8 @@ export default {
   }),
   mounted() {
     console.log(this.env)
+    console.log(this.$route.path)
+    console.log(this.$route.name)
   }
 }
 </script>
