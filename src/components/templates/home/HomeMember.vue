@@ -61,9 +61,9 @@ export default {
   },
   data: () => ({
     contents: [
-      {title: "オフライン交流会", src: "/img/immigrant.jpg"},
-      {title: "チャット", src: "/img/slack_zatsudan.png"},
-      {title: "オフライン大会", src: "/img/slack_ss_mosaic.png"},
+      {title: "オフライン交流会", src: "img/immigrant.jpg"},
+      {title: "チャット", src: "img/slack_zatsudan.png"},
+      {title: "オフライン大会", src: "img/slack_ss_mosaic.png"},
     ]
   })
 }
