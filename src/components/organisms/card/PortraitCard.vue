@@ -7,6 +7,7 @@
     <div>
       <v-img
         :src="portrait"
+        lazy-src="img/defalut_portrait.jpg"
         width="100%"
         position="center center"
         aspect-ratio="1" />

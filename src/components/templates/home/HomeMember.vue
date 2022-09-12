@@ -61,6 +61,9 @@ export default {
       {name: "s", games: ["Beatmania iidx", "CROSS×BEATS"], article: "立ち上げを勧めました。"},
       {name: "m", games: ["SOUND VOLTEX"], article: "ボルテメインです。"},
       {name: "o", games: ["テニラビ", "DEEMO"], article: "スマホメインです。"},
+      {name: "t", games: ["Beatmania iidx"], article: "めざせ皆伝"},
+      {name: "ow", games: ["jubeat", "REFLEC BEAT"], article: "いろいろやってます"},
+      {name: "mt", games: ["DJMAX", "Beatmania"], article: "最近復帰しました。"},
     ],
   }),
 }
